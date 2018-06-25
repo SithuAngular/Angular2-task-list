@@ -1,0 +1,44 @@
+<!-- <p>
+  task-lists works!
+</p> -->
+  
+  
+<div class="container-fluid taskcontainer">
+  <div class="row">
+    <div class = "col-lg-6 colscontent">
+    <h1><span id="smiley">&#x270D;</span>Task Lists<span class="addTask" (click) = "addTasks()">&#43;</span></h1>  
+    <div>
+        <ul>
+          <li *ngFor='let x of listData;index as is'>
+            <span class='remove' (click)="remove(is)">&#x2613; </span>
+            <span class="editTask" (click) = "imgBinding($event,is)">&#x270E;</span>
+            <span>{{x|uppercase}}
+              
+              <!-- <img (click)="imgBinding($event,is)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Simpleicons_Business_crayon-pen-variant-in-diagonal-position.svg/1024px-Simpleicons_Business_crayon-pen-variant-in-diagonal-position.svg.png" alt="" /> -->
+            </span>
+          </li>
+        </ul>
+      </div>
+     
+    </div>
+    <div class = "col-lg-6 colscontent">
+        <div *ngIf='addNewData' class="inputTag">
+            <input type="text" class="inp" placeholder="Enter the Task Name" [(ngModel)]="inpData">
+            <button value="add" (click)='AddData(inpData)' [disabled]="!isUnchanged">Add</button>
+          </div>
+          <div *ngIf='editData' class='edit'>
+            <h3>Change Task
+              <span class="close" (click)="closing()">x</span>
+            </h3>
+            <input type="text" [(ngModel)]="oldData"/>
+            <button type="button" value="Change" (click)="newData(oldData)">Change</button>
+          </div>
+          <span *ngIf='errorMsg' class='errorMsg'>
+            {{error}}
+          </span>
+          <div>
+            <h3><span id="total">Total: {{total}}</span></h3>
+          </div>
+    </div>
+  </div>  
+</div>

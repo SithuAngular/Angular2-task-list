@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .taskcontainer{
+    border:5px solid rgb(212, 16, 16);
+    padding: 10px;
+    box-sizing: border-box;    
+    text-align: center;
+  }
+  .colscontent{
+    border:5px solid rgb(99, 11, 240);
+    padding: 10px;
+    box-sizing: border-box;    
+    
+  }
+  h1{
+    background-color: #0aec61;
+    padding: 10px;
+    text-align: center;
+    /* margin: 0 auto; */
+    box-sizing: border-box;
+    /* margin-bottom: 5px;     */
+    /* width: 100%; */
+  }
+  input[type="text"]{
+    text-align: center;
+    font-size: 1.2em;
+    width: 75%;
+    box-sizing: border-box;
+    height: 30px;
+  }
+  button{
+    font-size: 1.2em;
+     width: 147px;
+     height: 30px;
+      box-sizing: border-box;
+      padding: 2px;
+      color: white;
+      background-color: rgb(224, 15, 15);
+      border: 1px solid rgb(238, 9, 9);
+  }
+  .inputTag{
+    background-color:white;
+    padding: 5px;
+    /* border: 3px solid darkslategray; */
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    font-size: 1.2em;
+    background-color: #eee;
+    padding: 10px;
+    border: 3px solid darkslategray;
+    border-top: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  li:last-child(){
+    border-bottom: 5px solid;
+  }
+  li>span.remove{
+    float: right;
+    cursor: pointer;
+    font-size:30px;
+    margin-top: -10px;
+    color:red; 
+  }
+  li>span.remove:hover{
+    color:grey;
+  }
+  li>span.editTask{
+    float: left;
+    cursor: pointer;
+    font-size:30px;
+    margin-top: -10px;
+  }
+  li>span.editTask:hover{
+    color:grey;
+  }
+  span.errorMsg{
+    color: red;
+    font-size:25px;
+    width: auto;
+    margin:0 35%;
+  }
+  .edit{
+    margin: 1px;
+    border: 3px solid darkslategrey;
+    padding: 5px;
+  }
+  h3{
+    padding: 5px 0;
+    color: red;
+  }
+  .hide
+  {
+    display:none;
+  }
+  .show
+  {
+    display:block;
+  }
+  span.close {
+      float: right;
+      margin-right: 2px;
+      cursor: pointer;
+      margin-top: -5px;
+      font-size: 24px;
+  }
+  span>img{
+    float:right;
+    padding:5px;
+    height:20px;
+    width:20px;
+    margin-top: -5px;
+  }
+  span.addTask{
+    float: right;
+    cursor: pointer;
+    /* font-size:30px; */
+    margin-right: 20px; 
+    width: 15px;
+    height: 15px;
+  }
+  span.addTask:hover{
+    color:grey;
+  }
+  #total{
+    /* float: right; */
+    color:dimgray;
+    font-size:25px;
+    margin-top: 7px;
+    font-style:italic;
+    text-align: center;
+  }
+  #smiley{
+    float: left;
+    width: 15px;
+    height: 15px;
+  }
+  @media only screen and (max-width: 800px) {
+      .container{
+        width: 450px;
+      }
+      input[type="text"]{
+        width: 400px;
+      }
+      button{
+        width:400px;
+        color:black;
+        background-color: #989898;
+      }
+  }
